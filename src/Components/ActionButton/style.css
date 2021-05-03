@@ -4,6 +4,7 @@
     height: auto;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .operationButton{
@@ -49,13 +50,13 @@
     
 @media (max-width: 1500px) and (min-width: 1200px){
     .operationButton{
-    width: 20vw;
+    width: 15vw;
     }
 }
 
 @media (max-width: 1200px) and (min-width: 700px){
     .operationButton{
-    width: 25vw;
+    width: 20vw;
     font-size: 0.7rem;
     }
 }
@@ -63,7 +64,8 @@
 
 @media (max-width: 700px) and (min-width: 200px){
     .operationButton{
-        width: 50vw;
+        width: 20vw;
         font-size: 0.5rem;
     }
 }
+
