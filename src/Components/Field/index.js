@@ -1,29 +1,38 @@
 import React,{useState} from 'react';
 import { useForm } from "react-hook-form";
+import {CustomAlert, formatString} from '../../constants';
+import './style.css'
 
-const Field = ({func}) => {
+const Field = ({func, labelText}) => {
     
-    const [info, setInfo] = useState([{}]);
-
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [info, setInfo] = useState([]);
+    const [id, setId] = useState(0);
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        setInfo(data);
-        func(info);
+        setId(id+1)
+        setInfo(formatString(data.Register.replace(/\n/ig, '.')))
+        func(info)
+        CustomAlert("¡Data send succesfully!", "Now you can see it in table", "success")
     };
-    
+
 
     return (
-    <>
-    <label>Title : </label>
-    <form onSubmit={handleSubmit(onSubmit)}>
-        <textarea type="textarea" 
-            name="textValue"
-            {...register("Register", { required: true })}
-        />
-        {errors.Register && <span>This field is required</span>}
-        <input type="submit" placeholder="Add" />
-    </form>
-    </>
+    <div className="customFieldComponent">
+        <label>{labelText}</label>
+        <form onSubmit={handleSubmit(onSubmit)}>
+                <textarea 
+                    className="textareaTag"
+                    type="textarea" 
+                    rows={id}
+                    name="textValue"
+                    {...register("Register", { required: true })}
+                />
+            {errors.Register && <span>This field is required</span>}
+            <div className="fieldSecondaryContainer">
+                <input type="submit" placeholder="Add" className="buttonInput"/>
+            </div>
+        </form>
+    </div>
     )
 }
 

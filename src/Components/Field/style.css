@@ -1,0 +1,74 @@
+.customFieldComponent{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 25vw;
+    margin-top: 15px;
+    font-family: 'Krona One', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+span{
+    color: rgb(255, 0, 0);
+}
+.buttonInput{
+    border: none;
+    width: 7vw;
+    height: 3vh;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.customFieldComponent label{
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+.textareaTag{
+    border:none;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 15px;
+}
+
+.textareaTag:focus{
+    outline: none;
+    border: none;
+}
+.fieldSecondaryContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+textarea { 
+    display: block; 
+    margin: 0 auto;
+    text-align: center; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.buttonInput {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .buttonInput:hover, .buttonInput:focus, .buttonInput:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
