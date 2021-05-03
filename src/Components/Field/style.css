@@ -72,3 +72,29 @@ textarea {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
+
+  @media (max-width: 1500px) and (min-width: 700px){
+    .customFieldComponent{
+    width: 40vw;
+    }
+    .textareaTag{
+        width: 30vw;
+    }
+    .buttonInput{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) and (min-width: 300px){
+    .customFieldComponent{
+    width: 40vw;
+    }
+    .textareaTag{
+        width: 30vw;
+    }
+    .buttonInput{
+        width: 100%;
+    }
+}
