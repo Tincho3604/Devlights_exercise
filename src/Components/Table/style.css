@@ -3,16 +3,19 @@
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: 1000px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    background-color: rgb(247, 234, 234);
+    background-color: rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background: rgb(252,70,70);
+    background: radial-gradient(circle, rgba(252,70,70,1) 0%, rgba(9,48,244,1) 0%, rgba(117,194,218,1) 100%, rgba(218,94,123,1) 100%, rgba(203,140,72,1) 100%);
     color: #ffffff;
     text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
 }
 
 .styled-table th,
@@ -21,6 +24,8 @@
 }
 
 .styled-table tbody tr {
+    transition: all 0.5s ease-out;
+    font-family: 'Orbitron', sans-serif;
     border-bottom: 1px solid #dddddd;
 }
 
@@ -29,5 +34,10 @@
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #000000;
+    
+}
+
+.styled-table tbody tr:hover{
+    background-color: rgb(227, 249, 255);
 }
