@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Table from '../../Components/Table';
 import './style.css';
 
