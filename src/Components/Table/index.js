@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import Field from '../../Components/Field';
 import ActionButton from '../ActionButton';
+import {CustomAlert} from '../../constants';
 import './style.css'
 const Table = ({allItems}) => {
     
@@ -9,6 +10,7 @@ const Table = ({allItems}) => {
     const recover = (e) => setObj(e)
     
     const deleteItem = (id) => {
+        CustomAlert("¡Item delete succesfully!", "Item deleted", "warning")
         setObj(obj?.filter((item, index) => index !== id))
     }
 

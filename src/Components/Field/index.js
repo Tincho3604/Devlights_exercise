@@ -4,15 +4,13 @@ import {CustomAlert, formatString} from '../../constants';
 import './style.css'
 
 const Field = ({func, labelText}) => {
-    
-    const [info, setInfo] = useState([]);
-    const [id, setId] = useState(0);
+    const [rows, setRows] = useState(0);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        setId(id+1)
-        setInfo(formatString(data.Register.replace(/\n/ig, '.')))
-        func(info)
+        console.log(data)
+        setRows(rows+1)
         CustomAlert("¡Data send succesfully!", "Now you can see it in table", "success")
+        func(formatString(data.Register.replace(/\n/ig, '.')))
     };
 
 
@@ -23,7 +21,7 @@ const Field = ({func, labelText}) => {
                 <textarea 
                     className="textareaTag"
                     type="textarea" 
-                    rows={id}
+                    rows={rows}
                     name="textValue"
                     {...register("Register", { required: true })}
                 />

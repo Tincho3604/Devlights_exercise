@@ -5,7 +5,6 @@ import './style.css';
 const Home = () => {
 return (
     <div className="mainHomeContainer">
-
         <Table />
     </div> 
     )
