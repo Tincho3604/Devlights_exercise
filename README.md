@@ -11,7 +11,6 @@ _Two rows in the grid._
 ![unnamed](https://user-images.githubusercontent.com/62455807/116924598-79fc8f00-ac2e-11eb-8521-ca5153fb9d73.png)
 ## Requeriments:
 
-* It will be valued
 * Resolution of the problem.
 * Use of good practices.
 * Styles and good deposition of controls in the UI.
