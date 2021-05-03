@@ -5,12 +5,13 @@ import './style.css'
 
 const Field = ({func, labelText}) => {
     const [rows, setRows] = useState(0);
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register,reset ,handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
         setRows(rows+1)
         CustomAlert("¡Data send succesfully!", "Now you can see it in table", "success")
         func(formatString(data.Register.replace(/\n/ig, '.')))
+        reset()
     };
 
 
